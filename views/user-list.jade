@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	.container
+		h1 User List
+		table.table.table-striped
+			thead
+				tr
+					th Name
+					th Username 
+					th Password
+			tbody
+				- each user in userList
+					tr
+						td= user.name
+						td= user.username	
+						td= user.password
