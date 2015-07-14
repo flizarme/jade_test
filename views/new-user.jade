@@ -3,7 +3,11 @@ extends layout
 block content
 	.container
 		h1= title
-	    form#formAddUser(name="adduser",method="post",action="/adduser")
-	        input#inputUserName(type="text", placeholder="username", name="username")
-	        input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
-	        button#btnSubmit(type="submit") submit
+		form(name="addUser",method="post",action="/add-user")
+			input(type="text", placeholder="Name", name="name")
+			input(type="text", placeholder="Username", name="username")
+			input(type="password", placeholder="Password", name="password")
+			button(type="submit") submit
+
+	script( src='https://code.jquery.com/jquery-2.1.4.min.js' )
+	script( src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
